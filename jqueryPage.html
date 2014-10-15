@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script src="jquery-1.11.1.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+        $('input[name=valor]:radio').click(function() {
+
+        if($(this).val()=="sim") {
+        $('#div1').show();
+        $('#div2,#div3,#div4').hide();
+        } else {
+        $('#div1').hide();
+        $('#div2,#div3,#div4').show();
+        }
+
+        });
+
+        });
+    </script>
+
+    <script>
+    $(document).ready(function () {
+        $('#menor18').hide();
+        $('#maior18').hide();
+        $('input[name=idade]:radio').click(function () {
+            if ($(this).val() == "a") {
+                $('#maior18').show();
+                $('#menor18').hide();
+            } else {
+                $('#maior18').hide();
+                $('#menor18').show();
+            }
+
+        });
+
+    });
+    </script>
+
+    Selecionar - Numerar
+    <form>
+        SIM: <input type="radio" name="valor" value="sim" checked="checked">
+        Não: <input type="radio" name="valor" value="não">
+    </form>
+
+    <div id="div1">
+        <h1>Pergunta 1</h1>
+    </div>
+    <div id="div2" style="display:none;">
+        <h1>Pergunta 2</h1>
+    </div>
+    <div id="div3" style="display:none;">
+        <h1>Pergunta 3</h1>
+    </div>
+    <div id="div4" style="display:none;">
+        Compressed and uncompressed copies of jQuery files are available. The uncompressed file is best used during development or debugging; the compressed file saves bandwidth and improves performance in production. You can also download a sourcemap file for use when debugging with a compressed file. The map file is not required for users to run jQuery, it just improves the developer's debugger experience. As of jQuery 1.11.0/2.1.0 the //# sourceMappingURL comment is not included in the compressed file.
+    </div>
+    <br /><br />
+    Selecionar - Numerar
+    <form>
+        Maior que 18: <input type="radio" name="idade" value="a">
+        Menor que 18: <input type="radio" name="idade" value="b">
+    </form>
+
+
+    <div id="maior18">
+        <h1>> 18 <br />8-)</h1>
+    </div>
+    <div id="menor18" style="display:none;">
+        <h1>< 18 <br />;-)</h1>
+    </div>
+
+</body>
+</html>
